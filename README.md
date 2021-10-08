@@ -11,7 +11,7 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-### Instalar o StreamLit, BeautifulSoup
+### Instalar o StreamLit, BeautifulSoup e Selenium
 ```
 pip install streamlit, beautifulsoup4, selenium
 ```
