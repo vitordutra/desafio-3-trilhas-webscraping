@@ -22,4 +22,4 @@ pip install streamlit, beautifulsoup4, selenium
 ```
 streamlit run main.py
 ```
-**Obs: no primeiro rum pode ser que peça um email para autenticar**
+**Obs: no primeiro run pode ser que peça um email para autenticar**
