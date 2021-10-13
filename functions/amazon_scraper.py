@@ -64,7 +64,9 @@ def search_produto(pesquisa):
     
     # passando por todas as páginas
     my_bar = st.progress(0)
+    i = 0
     for page in range(total_pages):
+        i+=1
         driver.get(url.format(page+1))
         soup = BeautifulSoup(driver.page_source, 'html.parser')
         results = soup.find_all('div',{'data-component-type':'s-search-result'})
@@ -73,11 +75,9 @@ def search_produto(pesquisa):
             card = extraindo_dados(item)
             if card:
                 cards.append(card)
+        my_bar.progress(i + 1)
 
-            
-    
-    for percent_complete in range(100):  
-        my_bar.progress(percent_complete + 1)         
+     
     driver.close()
     
     #Salvando dados em csv com pandas

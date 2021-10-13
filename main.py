@@ -1,7 +1,11 @@
 from functions.amazon_scraper import search_produto
 import streamlit as st
 
-st.sidebar.select_slider()
+
+add_selectbox = st.sidebar.selectbox(
+    "Avaliação",
+    (chr(0x2606), 2*chr(0x2606), 3*chr(0x2606), 4*chr(0x2606), 5*chr(0x2606))
+)
 
 with st.form(key="entrada"):
     text_input = st.text_input(label='Buscar o produto')
@@ -10,3 +14,4 @@ with st.form(key="entrada"):
     if submit_button:
         if text_input != "":
             data = search_produto(text_input)
+            st.write(data)
