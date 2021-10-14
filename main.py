@@ -13,5 +13,4 @@ with st.form(key="entrada"):
 
     if submit_button:
         if text_input != "":
-            data = search_produto(text_input)
-            st.write(data)
+            
