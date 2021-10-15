@@ -4,7 +4,7 @@ from selenium import webdriver
 from webdriver_manager.chrome import ChromeDriverManager
 
 def get_url(pesquisa):
-    url = f'https://www.amazon.com.br/s?k={pesquisa}&i=electronics&__mk_pt_BR=ÅMÅŽÕÑ&ref=nb_sb_noss_1'
+    url = f'https://www.amazon.com.br/s?k={pesquisa}&i=electronics&__mk_pt_BR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&ref=nb_sb_noss_2'
     pesquisa = pesquisa.replace(' ','+')
         
     # adicionando pagina para url
@@ -73,7 +73,7 @@ def main(pesquisa):
                 cards.append(card)
          
         # Caso pagina tenha mais que 50 paginas, parar na 50        
-        if(page==49):
+        if(page==29):
             break
                 
     driver.close()
@@ -81,6 +81,5 @@ def main(pesquisa):
     #Salvando dados em csv com pandas
     dataset = pd.DataFrame(cards)
     dataset.to_csv(f'output/dataset_{pesquisa}.csv'.replace(' ','_'), sep=';',index = False, encoding = 'utf-8-sig')
-    
-main('smartphone')
 
+main('pc')
