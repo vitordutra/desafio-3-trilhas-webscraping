@@ -86,4 +86,4 @@ def main(pesquisa):
     dataset = pd.DataFrame(cards)
     dataset.to_csv(f'output/dataset_{pesquisa}_date.csv'.replace(' ','_'), sep=';',index = False, encoding = 'utf-8-sig')
 
-main('notebook')
+main('smartphone')
