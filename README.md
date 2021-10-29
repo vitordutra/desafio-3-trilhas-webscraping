@@ -11,15 +11,15 @@ python -m venv venv
 .\venv\Scripts\activate
 ```
 
-### Instalar o StreamLit, BeautifulSoup e Selenium
+### Instale as bibliotecas necessárias
 ```
-pip install streamlit, beautifulsoup4, selenium
+pip install -r req.txt
 ```
 
 **Observação: streamlit instalar o pandas + numpy + requests e outras por padrão.**
 
 ### Para rodar o streamlit use o seguinte comando
 ```
-streamlit run main.py
+python main.py
 ```
 **Obs: no primeiro run pode ser que peça um email para autenticar**
