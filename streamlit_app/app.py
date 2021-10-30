@@ -112,7 +112,9 @@ def main():
     st.write("**A escolha de produto asseguir, influência nos dois proximos gráficos.**")
     produto = st.selectbox('Escolha um produto', ('Notebook', 'Smartphone', 'TV', 'Geladeira'))
     dados_selecionados = df_filtros_marcas[df_filtros_marcas["Categoria"] == produto]
-        
+    
+    total_produto = df_filtros_geral[df_filtros_geral['Categoria'] == produto].shape[0]
+    st.write(f"**Total de dados de {produto}s**: {total_produto}")    
 
     st.write("**Gráfico II - Contagem de produtos de cada marca por loja**")
 
